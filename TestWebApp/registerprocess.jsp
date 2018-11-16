@@ -63,14 +63,16 @@ String userpass=request.getParameter("userpass");
 String useremail=request.getParameter("useremail");
 String usercontact=request.getParameter("usercontact");
 
+String driver = "com.mysql.jdbc.Driver";
 
-Class.forName("com.microsoft.jdbc.sqlserver.SQLServerDriver");
-String connectionUrl = "jdbc:sqlserver://PALMTVM25.mcgrawgroup.com:1433;databaseName=Docker_test;user=appuser;password=Oct@12345";
+    Class.forName(driver);
+    Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/emplist", "root", "password");
 
-        Connection con = DriverManager.getConnection(connectionUrl); Statement stmt = con.createStatement();
-            String SQL = "insert into employees(username,userpass,useremail,usercontact) values(?,?,?,?)";
-            ResultSet rs = stmt.executeQuery(SQL);
+    Statement st = con.createStatement();
+    int val = st.executeUpdate("insert into employees(username,userpass,useremail,usercontact) values(?,?,?,?)");
+    System.out.println("1 row affected");
 
+                    
 catch(Exception e){e.printStackTrace();}
 %>
 
