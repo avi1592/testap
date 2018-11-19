@@ -61,11 +61,11 @@ filter:alpha(opacity=100); /* For IE8 and earlier */
 
 <form method="post"  name="myform"  action="registerprocess.jsp"//>
 <table width="300" border="0" height="100">
-<tbody><tr>
+<tbody><!--<tr>
 <td>&nbsp;EmployeeSearch:<br></td>
 <td>&nbsp;<input type="text" name="username" ></td></tr><tr><td valign="top"><br></td>
 <td valign="top"><input type="submit" value="search" name="button1" onclick="sendInfo()"></td>
-</tr>
+</tr> -->
 
 </tbody>
 </table>

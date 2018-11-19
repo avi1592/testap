@@ -73,7 +73,7 @@ String driver = "com.mysql.jdbc.Driver";
     System.out.println("1 row affected");
 
                     
-catch(Exception e){e.printStackTrace();}
+
 %>
 
 	</div>
